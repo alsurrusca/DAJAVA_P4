@@ -55,7 +55,7 @@ public class TicketDAO {
                 ticket.setParkingSpot(parkingSpot);
                 ticket.setId(rs.getInt(2));
                 ticket.setVehicleRegNumber(vehicleRegNumber);
-                ticket.setPrice(rs.getDouble(3));
+                ticket.setPrice(rs.getInt(3));
                 ticket.setInTime(rs.getTimestamp(4));
                 ticket.setOutTime(rs.getTimestamp(5));
             }
@@ -66,6 +66,28 @@ public class TicketDAO {
         }finally {
             dataBaseConfig.closeConnection(con);
             return ticket;
+        }
+    }
+
+    public int getNumberOfTicket(String vehicleRegNumber) {
+        Connection con = null;
+        int numberOfTicket = 0;
+        try {
+            con = dataBaseConfig.getConnection();
+            PreparedStatement ps = con.prepareStatement(DBConstants.GET_NB_TICKET);
+
+            ps.setString(1, vehicleRegNumber);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                numberOfTicket = rs.getInt(1);
+            }
+            dataBaseConfig.closeResultSet(rs);
+            dataBaseConfig.closePreparedStatement(ps);
+        } catch (Exception ex) {
+            logger.error("Error", ex);
+        } finally {
+            dataBaseConfig.closeConnection(con);
+            return numberOfTicket;
         }
     }
 
@@ -86,4 +108,6 @@ public class TicketDAO {
         }
         return false;
     }
+
+
 }

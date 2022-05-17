@@ -5,6 +5,8 @@ import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
 
+import static java.time.ZoneOffset.UTC;
+
 public class DataBaseConfig {
 
     private static final Logger logger = LogManager.getLogger("DataBaseConfig");
@@ -13,7 +15,7 @@ public class DataBaseConfig {
         logger.info("Create DB connection");
         Class.forName("com.mysql.cj.jdbc.Driver");
         return DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/prod","root","rootroot");
+                "jdbc:mysql://localhost:3306/prod?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Paris","root","root");
     }
 
     public void closeConnection(Connection con){

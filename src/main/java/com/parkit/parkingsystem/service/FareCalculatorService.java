@@ -1,31 +1,75 @@
 package com.parkit.parkingsystem.service;
 
 import com.parkit.parkingsystem.constants.Fare;
+import com.parkit.parkingsystem.dao.TicketDAO;
 import com.parkit.parkingsystem.model.Ticket;
+import org.jetbrains.annotations.NotNull;
+
+import java.text.DecimalFormat;
+import java.util.concurrent.TimeUnit;
+
+import static com.parkit.parkingsystem.constants.ParkingType.CAR;
 
 public class FareCalculatorService {
 
-    public void calculateFare(Ticket ticket){
-        if( (ticket.getOutTime() == null) || (ticket.getOutTime().before(ticket.getInTime())) ){
-            throw new IllegalArgumentException("Out time provided is incorrect:"+ticket.getOutTime().toString());
-        }
+	TicketDAO ticketDAO = new TicketDAO();
+	private String numberOfTicket;
 
-        int inHour = ticket.getInTime().getHours();
-        int outHour = ticket.getOutTime().getHours();
+	public void calculateFare(@NotNull Ticket ticket) {
+		if ((ticket.getOutTime() == null) || (ticket.getOutTime().before(ticket.getInTime()))) {
+			throw new IllegalArgumentException("Out time provided is incorrect:" + ticket.getOutTime().toString());
+		}
 
-        //TODO: Some tests are failing here. Need to check if this logic is correct
-        int duration = outHour - inHour;
+		long outHour = ticket.getOutTime().getTime();
+		long inHour = ticket.getInTime().getTime();
 
-        switch (ticket.getParkingSpot().getParkingType()){
-            case CAR: {
-                ticket.setPrice(duration * Fare.CAR_RATE_PER_HOUR);
-                break;
-            }
-            case BIKE: {
-                ticket.setPrice(duration * Fare.BIKE_RATE_PER_HOUR);
-                break;
-            }
-            default: throw new IllegalArgumentException("Unkown Parking Type");
-        }
-    }
+		// Calculate Duration to know price
+		long duration1 = TimeUnit.MILLISECONDS.toMinutes(outHour - inHour);
+		float duration = ((float) duration1 / 60);
+
+		// First, saw if they came already
+		// Second, à partir de la seconde fois, 5%
+		//Sinon tarif habituel
+
+		//TODO: Some tests are failing here. Need to check if this logic is correct
+		// Free Park if less than thirty minutes
+		// Mes 5%
+
+		// En gros -> on récupère le ticket dans la bdd avec la plaque d'immatriculation,
+		//Si on a déja eu un ticket avec le numéro de plaque
+		//Alors on fait les 5%
+		//sinon on ne fait rien
+		String numberPlate = ticket.getVehicleRegNumber();
+		int getNumberOfTicket = ticketDAO.getNumberOfTicket(numberPlate);
+
+
+		if (duration <= 0.50) {
+
+		ticket.setPrice(0);
+
+		} else {
+			switch (ticket.getParkingSpot().getParkingType()) {
+			case CAR:
+				ticket.setPrice(duration * Fare.CAR_RATE_PER_HOUR);
+
+				break;
+
+			case BIKE:
+				ticket.setPrice(duration * Fare.BIKE_RATE_PER_HOUR);
+				break;
+
+			default:
+				throw new IllegalArgumentException("Unkown Parking Type");
+			}
+
+			if (getNumberOfTicket > 1) {
+
+				double finalPrice = ticket.getPrice() * 0.95;
+				DecimalFormat df = new DecimalFormat("0.00");
+				ticket.setPrice(finalPrice);
+				System.out.println("Your loyalty is rewarded with -5% on price ");
+				}
+
+		}
+	}
 }
