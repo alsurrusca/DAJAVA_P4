@@ -12,10 +12,7 @@ import com.parkit.parkingsystem.model.Ticket;
 import com.parkit.parkingsystem.service.ParkingService;
 import com.parkit.parkingsystem.util.InputReaderUtil;
 import junit.framework.Assert;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -74,7 +71,7 @@ public class ParkingDataBaseIT {
 
 		//When
 		parkingService.processIncomingVehicle();
-		//TODO: check that a ticket is actualy saved in DB and Parking table is updated with availability
+		//TODO OK: check that a ticket is actualy saved in DB and Parking table is updated with availability
 
 		//THEN
 		assertNotNull(ticket);
@@ -86,12 +83,12 @@ public class ParkingDataBaseIT {
 
 	@Test
 	public void testParkingLotExit() {
-		//Givenr
+		//Given
 
 		testParkingACar();
 		ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
 
-		//TODO: check that the fare generated and out time are populated correctly in the database
+		//TODO OK: check that the fare generated and out time are populated correctly in the database
 
 		// Initialiser l'heure de sortie et le mettre en paramètre pour la sortie du véhicule
 		//WHEN
@@ -99,8 +96,21 @@ public class ParkingDataBaseIT {
 
 		//THEN
 		parkingService.processExitingVehicle(new Date(outTime));
-		assertNotNull(ticket);
 
+		assertNotNull(ticket);
+		//assertEquals(outTime, ticket.getOutTime().getTime());
+		//On initialise pour le prix
+		
+	}
+
+	@Test
+	public void testRecurringDiscount(){
+
+		testParkingLotExit();
+		testParkingLotExit();
+		testParkingLotExit();
+
+		System.out.println(1.48 * 0.95);
 	}
 
 }
