@@ -34,6 +34,7 @@ public class ParkingService {
             if(parkingSpot !=null && parkingSpot.getId() > 0){
                 String vehicleRegNumber = getVehichleRegNumber();
                 int getnumberofticket = ticketDAO.getNumberOfTicket(vehicleRegNumber);
+
                 if (getnumberofticket > 1) {
                     System.out.println("Welcome Again");
                 }
@@ -102,11 +103,16 @@ public class ParkingService {
         }
     }
 
-    public void processExitingVehicle() {
+
+      public void processExitingVehicle() {
+        processExitingVehicle(new Date());
+    }
+
+    public void processExitingVehicle(Date outTime) {
+
         try{
             String vehicleRegNumber = getVehichleRegNumber();
             Ticket ticket = ticketDAO.getTicket(vehicleRegNumber);
-            Date outTime = new Date();
             ticket.setOutTime(outTime);
             DecimalFormat df = new DecimalFormat("0.00");
             fareCalculatorService.calculateFare(ticket);

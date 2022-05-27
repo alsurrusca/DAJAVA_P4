@@ -34,7 +34,7 @@ public class ParkingDataBaseIT {
 	private static ParkingSpotDAO parkingSpotDAO;
 	private static TicketDAO ticketDAO;
 	private static DataBasePrepareService dataBasePrepareService;
-	Ticket ticket = ticketDAO.getTicket("ABCDEF");
+	Ticket ticket;
 
 	@Mock
 	private static InputReaderUtil inputReaderUtil;
@@ -71,6 +71,7 @@ public class ParkingDataBaseIT {
 
 		//When
 		parkingService.processIncomingVehicle();
+		ticket = ticketDAO.getTicket("ABCDEF");
 		//TODO OK: check that a ticket is actualy saved in DB and Parking table is updated with availability
 
 		//THEN
@@ -86,31 +87,46 @@ public class ParkingDataBaseIT {
 		//Given
 
 		testParkingACar();
+
 		ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
 
 		//TODO OK: check that the fare generated and out time are populated correctly in the database
 
-		// Initialiser l'heure de sortie et le mettre en paramètre pour la sortie du véhicule
-		//WHEN
-		long outTime = ticket.getInTime().getTime() + 60 * 60 * 1000;
-
 		//THEN
+		long outTime = ticket.getInTime().getTime() + 60 * 60 * 1000;
 		parkingService.processExitingVehicle(new Date(outTime));
 
+		//Rappel du ticket pour ne pas avoir de décalage dans les millisecondes
+		ticket = ticketDAO.getTicket("ABCDEF");
 		assertNotNull(ticket);
-		//assertEquals(outTime, ticket.getOutTime().getTime());
+		assertNotNull(ticket.getOutTime());
 		//On initialise pour le prix
-		
+
 	}
 
 	@Test
 	public void testRecurringDiscount(){
 
-		testParkingLotExit();
-		testParkingLotExit();
-		testParkingLotExit();
 
-		System.out.println(1.48 * 0.95);
+		ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
+		parkingService.processIncomingVehicle();
+		ticket = ticketDAO.getTicket("ABCDEF");
+		long outTime = ticket.getInTime().getTime() + 60 * 60 * 1000;
+		parkingService.processExitingVehicle();
+
+		parkingService.processIncomingVehicle();
+		ticket = ticketDAO.getTicket("ABCDEF");
+		Date inTime = new Date();
+		inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
+		ticket.setInTime(inTime);
+		ticketDAO.saveTicket(ticket);
+		parkingService.processExitingVehicle();
+
+		assertEquals(Fare.CAR_RATE_PER_HOUR * 0.95,ticketDAO.getTicket("ABCDEF").getPrice());
+
+
+
+		//System.out.println(ticket.getPrice() * 0.95);
 	}
 
 }

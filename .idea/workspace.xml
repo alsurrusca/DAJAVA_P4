@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba1ab38c-0aa6-4c3f-af0b-5943d1b617bb" name="Default Changelist" comment="" />
+    <list default="true" id="e7413bf7-c57f-41a9-b047-d2ffc83b8893" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,9 +12,6 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -26,24 +23,164 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="29I5jU71XN7shEksCH4JyCM42fv" />
+  <component name="ProjectId" id="29I60ch9FjmgX3nLkUzr1WLQufP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="JUnit.FareCalculatorServiceTest.calculateFareBikeWithFivePourcentLess">
+    <configuration name="FareCalculatorServiceTest.calculateFareBikeWithFivePourcentLess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.FareCalculatorServiceTest" />
+      <option name="METHOD_NAME" value="calculateFareBikeWithFivePourcentLess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FareCalculatorServiceTest.calculateFareCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.FareCalculatorServiceTest" />
+      <option name="METHOD_NAME" value="calculateFareCar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FareCalculatorServiceTest.calculateFareWithFivePourcentLess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.FareCalculatorServiceTest" />
+      <option name="METHOD_NAME" value="calculateFareWithFivePourcentLess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FareCalculatorServiceTest.calculateFareWithoutFivePourcentLess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.FareCalculatorServiceTest" />
+      <option name="METHOD_NAME" value="calculateFareWithoutFivePourcentLess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FareCalculatorServiceTest.calculateFareWithoutFivePourcentLessForBike" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.FareCalculatorServiceTest" />
+      <option name="METHOD_NAME" value="calculateFareWithoutFivePourcentLessForBike" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FareCalculatorServiceTest.calculateFareBikeWithFivePourcentLess" />
+        <item itemvalue="JUnit.FareCalculatorServiceTest.calculateFareCar" />
+        <item itemvalue="JUnit.FareCalculatorServiceTest.calculateFareWithoutFivePourcentLessForBike" />
+        <item itemvalue="JUnit.FareCalculatorServiceTest.calculateFareWithoutFivePourcentLess" />
+        <item itemvalue="JUnit.FareCalculatorServiceTest.calculateFareWithFivePourcentLess" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ba1ab38c-0aa6-4c3f-af0b-5943d1b617bb" name="Default Changelist" comment="" />
-      <created>1652787894852</created>
+      <changelist id="e7413bf7-c57f-41a9-b047-d2ffc83b8893" name="Default Changelist" comment="" />
+      <created>1652788033143</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1652787894852</updated>
+      <updated>1652788033143</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1653646637714">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1653385936475" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1653646637714" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1653646637714">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1653385936475" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1653646637714" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1653646637714">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1653385936475" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1653646637714" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1653646637714">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1653385936475" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1653646637714" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1653396930342">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1653396930342" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1653396930342">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1653396930342" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1653396930342">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1653396930342" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1653396930342">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1653396930342" />
+    <state x="747" y="25" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1653313500354">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="747" y="25" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1653313500354" />
+    <state x="853" y="169" key="refactoring.ChangeSignatureDialog" timestamp="1653645516443">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="853" y="169" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1653645516443" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1653395003664">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1653395003664" />
   </component>
 </project>

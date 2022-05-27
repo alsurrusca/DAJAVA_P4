@@ -9,9 +9,11 @@ import com.parkit.parkingsystem.service.FareCalculatorService;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.text.DecimalFormat;
 import java.util.Date;
 
 public class FareCalculatorServiceTest {
@@ -152,8 +154,7 @@ public class FareCalculatorServiceTest {
 	public void calculateFareCarWithLessThanThirtyMinutesParkingTime() {
 
 		Date inTime = new Date();
-		inTime.setTime(
-				System.currentTimeMillis() - 30 * 60 * 1000); //30 minutes parking time should give 1/2th parking fare
+		inTime.setTime(System.currentTimeMillis() - 30 * 60 * 1000); //30 minutes parking time should give 1/2th parking fare
 		Date outTime = new Date();
 
 		ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
@@ -176,61 +177,94 @@ public class FareCalculatorServiceTest {
 		Date outTime = new Date();
 
 		ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
+		ticket.setVehicleRegNumber("ABCDEF");
+		ticket.setInTime(inTime);
+		ticket.setOutTime(outTime);
+		ticket.setParkingSpot(parkingSpot);
+		ticketDAO.saveTicket(ticket);
+
+
+		ticket.setInTime(inTime);
+		ticketDAO.saveTicket(ticket);
+		fareCalculatorService.calculateFare(ticket);
+		ticketDAO.getTicket("ABCDEF");
+		DecimalFormat df = new DecimalFormat("0.00");
+
+		assertEquals(df.format(Fare.CAR_RATE_PER_HOUR * 0.95),df.format(ticket.getPrice()));
+		System.out.println(df.format(ticket.getPrice()));
+		System.out.println(df.format(Fare.CAR_RATE_PER_HOUR * 0.95));
+
+
+	}
+
+	@Test
+	public void calculateFareBikeWithFivePourcentLess() {
+
+		TicketDAO ticketDAO = new TicketDAO();
+		Date inTime = new Date();
+		inTime.setTime(
+				System.currentTimeMillis() - 60 * 60 * 1000);
+		Date outTime = new Date();
+
+		ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.BIKE, false);
+		ticket.setVehicleRegNumber("ABCDEF");
+		ticket.setInTime(inTime);
+		ticket.setOutTime(outTime);
+		ticket.setParkingSpot(parkingSpot);
+		ticketDAO.saveTicket(ticket);
+
+
+		ticket.setInTime(inTime);
+		ticketDAO.saveTicket(ticket);
+		fareCalculatorService.calculateFare(ticket);
+		ticketDAO.getTicket("ABCDEF");
+		DecimalFormat df = new DecimalFormat("0.00");
+
+		assertEquals(df.format(Fare.BIKE_RATE_PER_HOUR * 0.95),df.format(ticket.getPrice()));
+		System.out.println(df.format(ticket.getPrice()));
+		System.out.println(df.format(Fare.BIKE_RATE_PER_HOUR * 0.95));
+
+
+	}
+
+
+	@Test
+	public void calculateFareWithoutFivePourcentLessForCar() {
+
+		Date inTime = new Date();
+		inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
+		Date outTime = new Date();
+		ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
 
 		ticket.setInTime(inTime);
 		ticket.setOutTime(outTime);
 		ticket.setParkingSpot(parkingSpot);
 		fareCalculatorService.calculateFare(ticket);
 
-		//Quand on fait appelle à getTicket, on retourne 2 donc recurrence
-		//When ticketDAO.getNumberOfTicket("ABCDEF");
-		//Then return 2;
+		DecimalFormat df = new DecimalFormat("0.00");
 
-		ticketDAO.getTicket("ABCDEF");
-
-		assertEquals(Fare.CAR_RATE_PER_HOUR * 0.95,ticket.getPrice());
-
-	}
-
-	@Test
-	public void calculateFareWithoutFivePourcentLessForCar() {
-
-		TicketDAO ticketDAO = new TicketDAO();
-		String numberPlate = ticket.getVehicleRegNumber();
-		int getnumberOfTicket = ticketDAO.getNumberOfTicket(numberPlate);
-		double finalPrice = ticket.getPrice();
-		ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
-
-		if(getnumberOfTicket < 1) {
-
-			finalPrice = Fare.CAR_RATE_PER_HOUR;
-			System.out.println(finalPrice);
-			ticket.setPrice(finalPrice);
-
-		}
-
-		assertEquals(Fare.CAR_RATE_PER_HOUR, finalPrice);
+		assertEquals(df.format(Fare.CAR_RATE_PER_HOUR),df.format(ticket.getPrice()));
+		System.out.println(df.format(ticket.getPrice()));
+		System.out.println(df.format(Fare.CAR_RATE_PER_HOUR));
 	}
 
 	@Test
 	public void calculateFareWithoutFivePourcentLessForBike() {
 
-		TicketDAO ticketDAO = new TicketDAO();
-		String numberPlate = ticket.getVehicleRegNumber();
-		int getnumberOfTicket = ticketDAO.getNumberOfTicket(numberPlate);
-		double finalPrice = ticket.getPrice();
+		Date inTime = new Date();
+		inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
+		Date outTime = new Date();
 		ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.BIKE, false);
 
-		if(getnumberOfTicket < 1) {
+		ticket.setInTime(inTime);
+		ticket.setOutTime(outTime);
+		ticket.setParkingSpot(parkingSpot);
+		fareCalculatorService.calculateFare(ticket);
 
-			finalPrice = Fare.BIKE_RATE_PER_HOUR;
-			ticket.setPrice(finalPrice);
+		DecimalFormat df = new DecimalFormat("0.00");
 
+		assertEquals(df.format(Fare.BIKE_RATE_PER_HOUR),df.format(ticket.getPrice()));
 
-		}
-
-		assertEquals(Fare.BIKE_RATE_PER_HOUR, finalPrice);
 	}
-
 
 }
