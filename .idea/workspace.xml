@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba1ab38c-0aa6-4c3f-af0b-5943d1b617bb" name="Default Changelist" comment="" />
+    <list default="true" id="e7413bf7-c57f-41a9-b047-d2ffc83b8893" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +13,12 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -26,7 +30,7 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="29I5jU71XN7shEksCH4JyCM42fv" />
+  <component name="ProjectId" id="29I60ch9FjmgX3nLkUzr1WLQufP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,16 +38,197 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager" selected="JUnit.FareCalculatorServiceTest">
+    <configuration name="FareCalculatorServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.FareCalculatorServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FareCalculatorServiceTest.calculateFareBikeWithFivePourcentLess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.FareCalculatorServiceTest" />
+      <option name="METHOD_NAME" value="calculateFareBikeWithFivePourcentLess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FareCalculatorServiceTest.calculateFareCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.FareCalculatorServiceTest" />
+      <option name="METHOD_NAME" value="calculateFareCar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FareCalculatorServiceTest.calculateFareCarWithFivePourcentLess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.FareCalculatorServiceTest" />
+      <option name="METHOD_NAME" value="calculateFareCarWithFivePourcentLess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FareCalculatorServiceTest.calculateTicketSetPriceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.FareCalculatorServiceTest" />
+      <option name="METHOD_NAME" value="calculateTicketSetPriceTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FareCalculatorServiceTest" />
+        <item itemvalue="JUnit.FareCalculatorServiceTest.calculateFareCar" />
+        <item itemvalue="JUnit.FareCalculatorServiceTest.calculateTicketSetPriceTest" />
+        <item itemvalue="JUnit.FareCalculatorServiceTest.calculateFareCarWithFivePourcentLess" />
+        <item itemvalue="JUnit.FareCalculatorServiceTest.calculateFareBikeWithFivePourcentLess" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ba1ab38c-0aa6-4c3f-af0b-5943d1b617bb" name="Default Changelist" comment="" />
-      <created>1652787894852</created>
+      <changelist id="e7413bf7-c57f-41a9-b047-d2ffc83b8893" name="Default Changelist" comment="" />
+      <created>1652788033143</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1652787894852</updated>
+      <updated>1652788033143</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1654100659956">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1654100659956" />
+    <state width="1340" height="130" key="GridCell.Tab.0.bottom" timestamp="1655383770738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="178" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1655201253532" />
+    <state width="1877" height="178" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655207701537" />
+    <state width="1340" height="130" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1655383770738" />
+    <state width="1340" height="130" key="GridCell.Tab.0.center" timestamp="1655383770738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="178" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1655201253532" />
+    <state width="1877" height="178" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655207701537" />
+    <state width="1340" height="130" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1655383770738" />
+    <state width="1340" height="130" key="GridCell.Tab.0.left" timestamp="1655383770738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="178" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1655201253532" />
+    <state width="1877" height="178" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655207701537" />
+    <state width="1340" height="130" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1655383770738" />
+    <state width="1340" height="130" key="GridCell.Tab.0.right" timestamp="1655383770738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="178" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1655201253532" />
+    <state width="1877" height="178" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655207701537" />
+    <state width="1340" height="130" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1655383770738" />
+    <state width="746" height="260" key="GridCell.Tab.1.bottom" timestamp="1655383541384">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655205091681" />
+    <state width="746" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1655383541384" />
+    <state width="746" height="260" key="GridCell.Tab.1.center" timestamp="1655383541384">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655205091681" />
+    <state width="746" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1655383541384" />
+    <state width="746" height="260" key="GridCell.Tab.1.left" timestamp="1655383541384">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655205091681" />
+    <state width="746" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1655383541384" />
+    <state width="746" height="260" key="GridCell.Tab.1.right" timestamp="1655383541384">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655205091681" />
+    <state width="746" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1655383541384" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1654678389014">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1654678389014" />
+    <state x="747" y="25" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1653313500354">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="747" y="25" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1653313500354" />
+    <state x="853" y="169" key="refactoring.ChangeSignatureDialog" timestamp="1653645516443">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="853" y="169" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1653645516443" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1654678390554">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1654678390554" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1654100644286">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1654100644286" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/parking_system$ParkingServiceTest.ic" NAME="ParkingServiceTest Coverage Results" MODIFIED="1655233315064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.parkit.parkingsystem.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/parking_system$ParkingDataBaseIT.ic" NAME="ParkingDataBaseIT Coverage Results" MODIFIED="1654678636483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.parkit.parkingsystem.integration.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/parking_system$FareCalculatorServiceTest.ic" NAME="FareCalculatorServiceTest Coverage Results" MODIFIED="1655382728149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.parkit.parkingsystem.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/parking_system$All_in_parking_system.ic" NAME="All in parking-system Coverage Results" MODIFIED="1655233363303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/parking_system$TicketDAOTest.ic" NAME="TicketDAOTest Coverage Results" MODIFIED="1655382774521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.parkit.parkingsystem.integration.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/parking_system$FareCalculatorServiceTest_calculateFareUnkownType.ic" NAME="FareCalculatorServiceTest.calculateFareUnkownType Coverage Results" MODIFIED="1655199530031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.parkit.parkingsystem.*</FILTER>
+    </SUITE>
   </component>
 </project>

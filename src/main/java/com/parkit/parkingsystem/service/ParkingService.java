@@ -1,5 +1,6 @@
 package com.parkit.parkingsystem.service;
 
+import com.parkit.parkingsystem.constants.Fare;
 import com.parkit.parkingsystem.constants.ParkingType;
 import com.parkit.parkingsystem.dao.ParkingSpotDAO;
 import com.parkit.parkingsystem.dao.TicketDAO;
@@ -20,7 +21,7 @@ public class ParkingService {
 
     private InputReaderUtil inputReaderUtil;
     private ParkingSpotDAO parkingSpotDAO;
-    private  TicketDAO ticketDAO;
+    TicketDAO ticketDAO = new TicketDAO();
 
     public ParkingService(InputReaderUtil inputReaderUtil, ParkingSpotDAO parkingSpotDAO, TicketDAO ticketDAO){
         this.inputReaderUtil = inputReaderUtil;
@@ -34,6 +35,7 @@ public class ParkingService {
             if(parkingSpot !=null && parkingSpot.getId() > 0){
                 String vehicleRegNumber = getVehichleRegNumber();
                 int getnumberofticket = ticketDAO.getNumberOfTicket(vehicleRegNumber);
+
                 if (getnumberofticket > 1) {
                     System.out.println("Welcome Again");
                 }
@@ -102,14 +104,20 @@ public class ParkingService {
         }
     }
 
-    public void processExitingVehicle() {
+
+      public void processExitingVehicle() {
+        processExitingVehicle(new Date());
+    }
+
+    public void processExitingVehicle(Date outTime) {
+
         try{
             String vehicleRegNumber = getVehichleRegNumber();
             Ticket ticket = ticketDAO.getTicket(vehicleRegNumber);
-            Date outTime = new Date();
             ticket.setOutTime(outTime);
             DecimalFormat df = new DecimalFormat("0.00");
             fareCalculatorService.calculateFare(ticket);
+
             if(ticketDAO.updateTicket(ticket)) {
                 ParkingSpot parkingSpot = ticket.getParkingSpot();
                 parkingSpot.setAvailable(true);
