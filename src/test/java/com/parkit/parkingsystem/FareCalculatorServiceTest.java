@@ -10,9 +10,12 @@ import com.parkit.parkingsystem.model.ParkingSpot;
 import com.parkit.parkingsystem.model.Ticket;
 import com.parkit.parkingsystem.service.FareCalculatorService;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 import java.sql.Time;
@@ -28,20 +31,26 @@ public class FareCalculatorServiceTest {
 	private static DataBasePrepareService dataBasePrepareService;
 	private static ParkingSpotDAO parkingSpotDAO;
 
+	@ExtendWith(MockitoExtension.class)
+
 	@BeforeAll
 	private static void setUp() throws Exception {
+		fareCalculatorService = new FareCalculatorService();
 		parkingSpotDAO = new ParkingSpotDAO();
-		ticketDAO = new TicketDAO();
 		parkingSpotDAO.dataBaseConfig = dataBaseTestConfig;
+		ticketDAO = new TicketDAO();
 		ticketDAO.dataBaseConfig = dataBaseTestConfig;
 		dataBasePrepareService = new DataBasePrepareService();
+
 	}
+
 	@BeforeEach
 	private void setUpPerTest() throws Exception {
 
+		ticket = new Ticket();
 		dataBasePrepareService.clearDataBaseEntries();
-
 	}
+
 
 
 
@@ -188,19 +197,54 @@ public class FareCalculatorServiceTest {
 	@Test
 	public void calculateFareCarWithFivePourcentLess() {
 
-		TicketDAO ticketDAO = new TicketDAO();
+/*
 		Date inTime = new Date();
 		inTime.setTime(
 				System.currentTimeMillis() - 60 * 60 * 1000);
 		Date outTime = new Date();
 
-		ParkingSpot parkingSpot = new ParkingSpot(2, ParkingType.CAR, false);
+		ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
+		ticket.setVehicleRegNumber("ABCDEF");
+		ticket.setInTime(inTime);
+		ticket.setOutTime(outTime);
+		ticket.setParkingSpot(parkingSpot);
+		fareCalculatorService.calculateFare(ticket);
+		ticket.getPrice();
+		System.out.println(ticket.getPrice());
+		ticketDAO.getTicket("ABCDEF");
 
 		ticketDAO.saveTicket(ticket);
+
+		ticket.setVehicleRegNumber("ABCDEF");
+		ticket.setInTime(inTime);
+		ticket.setOutTime(outTime);
+		ticket.setParkingSpot(parkingSpot);
+		fareCalculatorService.calculateFare(ticket);
 		ticketDAO.getTicket("ABCDEF");
+		ticketDAO.saveTicket(ticket);
+		System.out.println(ticket.getPrice());
+
+
+
+
+
+		ticket.setVehicleRegNumber("ABCDEF");
+		ticket.setInTime(inTime);
+		ticket.setOutTime(outTime);
+		ticketDAO.saveTicket(ticket);
+		ticket.setParkingSpot(parkingSpot);
+		fareCalculatorService.calculateFare(ticket);
+		ticketDAO.getTicket("ABCDEF");
+		ticketDAO.updateTicket(ticket);
+		ticketDAO.saveTicket(ticket);
+
+*/
+		when(ticketDAO.getNumberOfTicket(anyString())).thenReturn(3);
+
 		DecimalFormat df = new DecimalFormat("0.00");
-		System.out.println(df.format(ticket.getPrice()));
-		System.out.println(df.format(Fare.CAR_RATE_PER_HOUR * 0.95));
+		assertEquals(df.format(Fare.CAR_RATE_PER_HOUR * 0.95),df.format(ticket.getPrice()));
+
+
 
 
 	}
@@ -208,6 +252,7 @@ public class FareCalculatorServiceTest {
 
 	@Test
 	public void calculateFareBikeWithFivePourcentLess() {
+
 
 		Date inTime = new Date();
 		inTime.setTime(
@@ -229,8 +274,7 @@ public class FareCalculatorServiceTest {
 		DecimalFormat df = new DecimalFormat("0.00");
 
 		assertEquals(df.format(Fare.BIKE_RATE_PER_HOUR * 0.95),df.format(ticket.getPrice()));
-		System.out.println(df.format(ticket.getPrice()));
-		System.out.println(df.format(Fare.BIKE_RATE_PER_HOUR * 0.95));
+
 
 
 	}
