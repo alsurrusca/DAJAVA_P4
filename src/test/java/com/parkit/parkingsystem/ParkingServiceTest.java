@@ -88,4 +88,14 @@ public class ParkingServiceTest {
         verify(parkingSpotDAO, Mockito.times(1)).updateParking(any(ParkingSpot.class));
     }
 
-}
+    @Test
+    public void nextAvailableSpotTest() throws Exception {
+        when(inputReaderUtil.readSelection()).thenReturn(1);
+        when(inputReaderUtil.readVehicleRegistrationNumber()).thenReturn("ABCDEF");
+        when(parkingSpotDAO.updateParking(any(ParkingSpot.class))).thenReturn(true);
+        when(parkingSpotDAO.getNextAvailableSlot(any())).thenReturn(2);
+        when(ticketDAO.getNumberOfTicket(anyString())).thenReturn(1);
+        parkingService.processIncomingVehicle();    }
+    }
+
+

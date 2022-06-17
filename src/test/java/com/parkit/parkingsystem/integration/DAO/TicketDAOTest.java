@@ -65,27 +65,13 @@ public class TicketDAOTest {
 
 	@Test
 	public void saveTicketTest() {
-
-		/*Date inTime = new Date();
-		inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
-		Date outTime = new Date();
-		ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
-
-		ticket.setInTime(inTime);
-		ticket.setOutTime(outTime);
-		ticket.setParkingSpot(parkingSpot);
-		fareCalculatorService.calculateFare(ticket);*/
-
-
-		/*ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
-		ticketDAO.getTicket("ABCDEF");
-		ticketDAO.saveTicket(ticket);
+		ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
 		parkingService.processIncomingVehicle();
 		ticket = ticketDAO.getTicket("ABCDEF");
-		parkingService.processExitingVehicle(new Date());*/
 
 
-
+		ticketDAO.saveTicket(ticket);
+		assertNotNull(ticket);
 
 	}
 
@@ -101,6 +87,7 @@ public class TicketDAOTest {
 
 		parkingService.processExitingVehicle(new Date(outTime));
 		ticketDAO.getTicket("ABCDEF");
+		ticketDAO.saveTicket(ticket);
 		assertNotNull(ticketDAO.getTicket("ABCDEF"));
 
 

@@ -42,6 +42,7 @@ public class FareCalculatorService {
 
 		if (duration <= 0.50) {
 
+			System.out.println("Test");
 		ticket.setPrice(0);
 
 		} else {
@@ -59,14 +60,14 @@ public class FareCalculatorService {
 				throw new IllegalArgumentException("Unkown Parking Type");
 			}
 
-			if (getNumberOfTicket > 2) {
+			if (getNumberOfTicket >= 2) {
 
+				System.out.println("Ca marche");
 				double priceWithDiscount = ticket.getPrice() * 0.95;
 				ticket.setPrice(priceWithDiscount);
 				System.out.println("Your loyalty is rewarded with -5% on price");
-				} else {
 
-			}
+				}
 
 		}
 	}
