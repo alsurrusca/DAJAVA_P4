@@ -199,7 +199,7 @@ public class FareCalculatorServiceTest {
 	}
 
 	@Test
-	public void calculateFareWithFivePourcentLess() throws Exception {
+	public void calculateFareCarWithFivePourcentLess() throws Exception {
 
 		Date inTime = new Date();
 		inTime.setTime(
@@ -233,6 +233,7 @@ public class FareCalculatorServiceTest {
 		ticketDAO.getTicket("ABCDEF");
 
 		fareCalculatorService.calculateFare(ticket);
+
 
 		DecimalFormat df = new DecimalFormat("0.00");
 		assertEquals(3, ticketDAO.getNumberOfTicket("ABCDEF"));
