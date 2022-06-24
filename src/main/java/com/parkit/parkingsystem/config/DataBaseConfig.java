@@ -5,8 +5,6 @@ import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
 
-import static java.time.ZoneOffset.UTC;
-
 public class DataBaseConfig {
 
     private static final Logger logger = LogManager.getLogger("DataBaseConfig");
