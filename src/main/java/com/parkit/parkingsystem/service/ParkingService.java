@@ -37,7 +37,6 @@ public class ParkingService {
 				int getnumberofticket = ticketDAO.getNumberOfTicket(vehicleRegNumber);
 				if (getnumberofticket > 1) {
 					System.out.println("Welcome Again");
-
 				}
 				parkingSpot.setAvailable(false);
 				parkingSpotDAO.updateParking(parkingSpot);//allot this parking space and mark it's availability as false

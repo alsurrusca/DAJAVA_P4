@@ -238,6 +238,48 @@ public class FareCalculatorServiceTest {
 		DecimalFormat df = new DecimalFormat("0.00");
 		assertEquals(3, ticketDAO.getNumberOfTicket("ABCDEF"));
 		assertEquals(df.format(Fare.CAR_RATE_PER_HOUR * 0.95), df.format(ticket.getPrice()));
+	}
+
+	@Test
+	public void calculateFareBikeWithFivePourcentLess() throws Exception {
+
+		Date inTime = new Date();
+		inTime.setTime(
+				System.currentTimeMillis() - 60 * 60 * 1000);
+		Date outTime = new Date();
+
+		ParkingSpot parkingSpot = new ParkingSpot(4, ParkingType.BIKE, false);
+		ticket.setVehicleRegNumber("ABCDEF");
+		ticket.setInTime(inTime);
+		ticket.setOutTime(outTime);
+		ticket.setParkingSpot(parkingSpot);
+		ticketDAO.saveTicket(ticket);
+		ticketDAO.getTicket("ABCDEF");
+
+		fareCalculatorService.calculateFare(ticket);
+
+		ticket.setVehicleRegNumber("ABCDEF");
+		ticket.setInTime(inTime);
+		ticket.setOutTime(outTime);
+		ticket.setParkingSpot(parkingSpot);
+		ticketDAO.saveTicket(ticket);
+		ticketDAO.getTicket("ABCDEF");
+
+		fareCalculatorService.calculateFare(ticket);
+
+		ticket.setVehicleRegNumber("ABCDEF");
+		ticket.setInTime(inTime);
+		ticket.setOutTime(outTime);
+		ticket.setParkingSpot(parkingSpot);
+		ticketDAO.saveTicket(ticket);
+		ticketDAO.getTicket("ABCDEF");
+
+		fareCalculatorService.calculateFare(ticket);
+
+
+		DecimalFormat df = new DecimalFormat("0.00");
+		assertEquals(3, ticketDAO.getNumberOfTicket("ABCDEF"));
+		assertEquals(df.format(Fare.BIKE_RATE_PER_HOUR * 0.95), df.format(ticket.getPrice()));
 
 	}
 

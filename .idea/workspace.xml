@@ -37,7 +37,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Projet 5/Cours/Spring Boot/helloworld" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
@@ -48,7 +48,7 @@
       <recent name="com.parkit.parkingsystem.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FareCalculatorServiceTest.calculateFareCarWithFivePourcentLess">
+  <component name="RunManager" selected="JUnit.ParkingServiceTest.processExitingVehicleTest">
     <configuration name="All in parking-system" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parking-system" />
       <option name="PACKAGE_NAME" value="" />
@@ -57,7 +57,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FareCalculatorServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FareCalculatorServiceTest.calculateFareBikeWithFivePourcentLess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parking-system" />
       <extension name="coverage">
         <pattern>
@@ -67,28 +67,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.parkit.parkingsystem" />
       <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.FareCalculatorServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FareCalculatorServiceTest.calculateFareCarWithFivePourcentLess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="parking-system" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.parkit.parkingsystem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.FareCalculatorServiceTest" />
-      <option name="METHOD_NAME" value="calculateFareCarWithFivePourcentLess" />
+      <option name="METHOD_NAME" value="calculateFareBikeWithFivePourcentLess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FareCalculatorServiceTest.calculateFareWithoutFivePourcentLessForBike" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParkingServiceTest.processExitingVehicleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parking-system" />
       <extension name="coverage">
         <pattern>
@@ -97,24 +82,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.parkit.parkingsystem" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.FareCalculatorServiceTest" />
-      <option name="METHOD_NAME" value="calculateFareWithoutFivePourcentLessForBike" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.ParkingServiceTest" />
+      <option name="METHOD_NAME" value="processExitingVehicleTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FareCalculatorServiceTest.calculateTicketSetPriceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParkingSpotDAOTest.nextAvailableSpotTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parking-system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.parkit.parkingsystem.*" />
+          <option name="PATTERN" value="com.parkit.parkingsystem.integration.DAO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.FareCalculatorServiceTest" />
-      <option name="METHOD_NAME" value="calculateTicketSetPriceTest" />
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.integration.DAO" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.integration.DAO.ParkingSpotDAOTest" />
+      <option name="METHOD_NAME" value="nextAvailableSpotTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParkingSpotDAOTest.updateParkingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.integration.DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.integration.DAO" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.integration.DAO.ParkingSpotDAOTest" />
+      <option name="METHOD_NAME" value="updateParkingTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FareCalculatorServiceTest.calculateFareCarWithFivePourcentLess" />
-        <item itemvalue="JUnit.FareCalculatorServiceTest" />
+        <item itemvalue="JUnit.ParkingServiceTest.processExitingVehicleTest" />
+        <item itemvalue="JUnit.FareCalculatorServiceTest.calculateFareBikeWithFivePourcentLess" />
         <item itemvalue="JUnit.All in parking-system" />
-        <item itemvalue="JUnit.FareCalculatorServiceTest.calculateFareWithoutFivePourcentLessForBike" />
-        <item itemvalue="JUnit.FareCalculatorServiceTest.calculateTicketSetPriceTest" />
+        <item itemvalue="JUnit.ParkingSpotDAOTest.updateParkingTest" />
+        <item itemvalue="JUnit.ParkingSpotDAOTest.nextAvailableSpotTest" />
       </list>
     </recent_temporary>
   </component>
@@ -158,55 +159,55 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="527" y="271" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824/1920.0.1680.1010@0.0.1536.824" timestamp="1656065622912" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1656073838838">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1657014407337">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1680.1010@0.0.1536.824" timestamp="1656060898869" />
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1656073838838" />
-    <state width="1493" height="244" key="GridCell.Tab.0.bottom" timestamp="1656074072426">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1657014407337" />
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1657020275357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="244" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1680.1010@0.0.1536.824" timestamp="1656065882212" />
-    <state width="1493" height="244" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1656074072426" />
-    <state width="1493" height="244" key="GridCell.Tab.0.center" timestamp="1656074072425">
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1657020275357" />
+    <state width="1493" height="198" key="GridCell.Tab.0.center" timestamp="1657020275357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="244" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1680.1010@0.0.1536.824" timestamp="1656065882212" />
-    <state width="1493" height="244" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1656074072425" />
-    <state width="1493" height="244" key="GridCell.Tab.0.left" timestamp="1656074072425">
+    <state width="1493" height="198" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1657020275357" />
+    <state width="1493" height="198" key="GridCell.Tab.0.left" timestamp="1657020275357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="244" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1680.1010@0.0.1536.824" timestamp="1656065882212" />
-    <state width="1493" height="244" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1656074072425" />
-    <state width="1493" height="244" key="GridCell.Tab.0.right" timestamp="1656074072425">
+    <state width="1493" height="198" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1657020275357" />
+    <state width="1493" height="198" key="GridCell.Tab.0.right" timestamp="1657020275357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="244" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1680.1010@0.0.1536.824" timestamp="1656065882212" />
-    <state width="1493" height="244" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1656074072425" />
-    <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1656074019116">
+    <state width="1493" height="198" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1657020275357" />
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1656919335991">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1680.1010@0.0.1536.824" timestamp="1656065241169" />
-    <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1656074019116" />
-    <state width="1493" height="260" key="GridCell.Tab.1.center" timestamp="1656074019116">
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1656919335991" />
+    <state width="1493" height="260" key="GridCell.Tab.1.center" timestamp="1656919335991">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1680.1010@0.0.1536.824" timestamp="1656065241169" />
-    <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1656074019116" />
-    <state width="1493" height="260" key="GridCell.Tab.1.left" timestamp="1656074019116">
+    <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1656919335991" />
+    <state width="1493" height="260" key="GridCell.Tab.1.left" timestamp="1656919335991">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1680.1010@0.0.1536.824" timestamp="1656065241168" />
-    <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1656074019116" />
-    <state width="1493" height="260" key="GridCell.Tab.1.right" timestamp="1656074019116">
+    <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1656919335991" />
+    <state width="1493" height="260" key="GridCell.Tab.1.right" timestamp="1656919335991">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1680.1010@0.0.1536.824" timestamp="1656065241169" />
-    <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1656074019116" />
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1651241392819">
+    <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1656919335991" />
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1656436227689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1651241392819" />
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1656436227689" />
     <state x="762" y="0" width="781" height="830" maximized="true" key="dock-window-1" timestamp="1652377947309">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -215,11 +216,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="418" y="48" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1651328750581" />
-    <state x="469" y="169" key="refactoring.ChangeSignatureDialog" timestamp="1656062182368">
+    <state x="469" y="169" key="refactoring.ChangeSignatureDialog" timestamp="1656423837278">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="469" y="169" key="refactoring.ChangeSignatureDialog/0.0.1536.824/1920.0.1680.1010@0.0.1536.824" timestamp="1656062182368" />
-    <state x="469" y="169" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1652202249423" />
+    <state x="469" y="169" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1656423837278" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1651389520023">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -54,7 +54,7 @@ public class ParkingServiceTest {
 	@Test
 	public void processIncomingVehicleBikeTest() {
 		when(inputReaderUtil.readSelection()).thenReturn(2);
-		when(parkingSpotDAO.getNextAvailableSlot(any())).thenReturn(5);
+		when(parkingSpotDAO.getNextAvailableSlot(any())).thenReturn(4);
 		parkingService.processIncomingVehicle();
 		verify(parkingSpotDAO, Mockito.times(1)).updateParking(any(ParkingSpot.class));
 

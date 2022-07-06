@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 <span class="fc" id="L11">    TicketDAO ticketDAO = new TicketDAO();</span>
 
     public void calculateFare(Ticket ticket) {
-<span class="pc bpc" id="L14" title="1 of 4 branches missed.">        if ((ticket.getOutTime() == null) || (ticket.getOutTime().before(ticket.getInTime()))) {</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">        if (ticket.getOutTime().before(ticket.getInTime())) {</span>
 <span class="fc" id="L15">            throw new IllegalArgumentException(&quot;Out time provided is incorrect:&quot; + ticket.getOutTime().toString());</span>
         }
 
